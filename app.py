@@ -135,7 +135,7 @@ def load_finbert():
 
 @st.cache_resource
 def load_bart():
-    return pipeline("summarization", model="sshleifer/distilbart-cnn-6-6")
+    return pipeline(model="sshleifer/distilbart-cnn-6-6")
 
 @st.cache_resource
 def load_spacy():
