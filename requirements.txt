@@ -1,0 +1,15 @@
+streamlit
+feedparser
+requests
+beautifulsoup4
+yfinance
+matplotlib
+seaborn
+transformers
+torch
+spacy
+wordcloud
+yake
+scikit-learn
+fpdf
+pandas
