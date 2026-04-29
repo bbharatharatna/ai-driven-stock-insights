@@ -262,7 +262,9 @@ def plot_volatility(stock_data):
         return
     changes = stock_data['Close'].pct_change().dropna() * 100
     fig, ax = plt.subplots(figsize=(10, 6))
-    changes.plot(kind='bar', color=TEAL_GREEN, ax=ax, alpha=0.8)
+    ax.bar(range(len(changes)), changes.values, color=TEAL_GREEN, alpha=0.8)
+    ax.set_xticks(range(len(changes)))
+    ax.set_xticklabels([str(d)[:10] for d in changes.index], rotation=45, ha='right')
     ax.set_ylabel('Daily % Change', fontweight='bold')
     ax.set_title('Daily Volatility (%)', fontweight='bold', color=CHARCOAL_GREY)
     ax.grid(True, alpha=0.3)
