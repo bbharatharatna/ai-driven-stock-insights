@@ -334,11 +334,7 @@ if st.button("🔍 Analyze", key="analyze_btn"):
 
     # --- Stock Data ---
     st.markdown(f"<h3 style='color: {TEAL_GREEN};'>📈 3. {company_name} ({ticker}) Stock Data (Last 7 Days)</h3>", unsafe_allow_html=True)
-    try:
     stock_data = fetch_stock_data(ticker)
-except Exception as e:
-    st.error(f"⚠️ Yahoo Finance rate limited. Please wait 1-2 minutes and try again.")
-    st.stop()
     st.dataframe(stock_data.tail(7))
 
     # --- Visualization: Stock Price ---
