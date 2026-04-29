@@ -8,7 +8,9 @@ seaborn
 transformers==4.36.2
 tokenizers==0.15.2
 torch
-spacy
+numpy<2.0
+spacy==3.7.4
+thinc==8.2.5
 wordcloud
 yake
 scikit-learn
